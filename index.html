@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.css">
+  <title>Using Pico CSS</title>
+</head>
+
+<body>
+  <div class="container-fluid">
+
+    <nav>
+      <ul>
+        <li><strong>MyPicoHome</strong></li>
+      </ul>
+      <ul>
+        <li><a href="#">Link1</a></li>
+      </ul>
+      <ul>
+        <li><a href="#">Link2</a></li>
+      </ul>
+      <ul>
+        <li><a href="#">Link3</a></li>
+      </ul>
+      <ul>
+        <li><a href="#">Link4</a></li>
+      </ul>
+      <ul>
+        <li>
+          <details role="list" dir="rtl">
+            <summary aria-haspopup="listbox" role="link">Dropdown</summary>
+            <ul role="listbox">
+              <li><a>Action</a></li>
+              <li><a>Another action</a></li>
+              <li><a>Something else here</a></li>
+            </ul>
+          </details>
+        </li>
+        <!-- <li><a href="#" role="button">Button</a></li> -->
+      </ul>
+    </nav>
+  
+    <!-- <header style="padding-top: 30px;">
+      <h2>Pico CSS 입니다~</h2>
+    </header> -->
+
+    <div>
+      <img src="./static/bingsu_20230922.jpg" width="600">
+    </div>
+  
+    <div class="grid">
+      <article >
+        <header> 머리 </header>
+        <p>It's a card!</p>
+        <footer> 발 </footer>
+      </article>
+      <article >
+        <header> 머리 </header>
+        <p>It's a card too!</p>
+        <footer> 발 </footer>
+      </article>
+    </div>
+
+    <div class="grid">
+      <button> 단추1 </button>
+      <button class="secondary"> 단추2 </button>
+      <button class="contrast"> 단추3 </button>
+      <button class="outline"> 단추4 </button>
+    </div>
+    
+    <footer style="text-align: center;">
+      <p>보금자리
+        <br>서울 관악구 관악로
+      </p>
+    </footer>
+  </div>
+  
+  <!-- <dialog id="modal1">
+    <article>
+      <h3>Confirm your action!</h3>
+      <p>
+        냉무
+      </p>
+      <footer>
+        <a href="#cancel" role="button" class="secondary">Cancel</a>
+        <a href="#confirm" role="button">Confirm</a>
+      </footer>
+    </article>
+  </dialog> -->
+
+</body>
+</html>
