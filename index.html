@@ -1,89 +1,93 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/alpinejs@2/dist/alpine.min.js" defer></script>
   <title>Using Pico CSS</title>
 </head>
 
 <body>
-  <div class="container-fluid">
-
-    <nav>
-      <ul>
-        <li><strong>PicoHome</strong></li>
-      </ul>
-      <ul>
-        <li><a href="#">Link1</a></li>
-        <li><a href="#">Link2</a></li>
-        <li><a href="#">Link3</a></li>
-        <li>
-          <details class="dropdown">
-            <summary>
-              Account
-            </summary>
-            <ul dir="rtl">
-              <li><a href="#">Profile</a></li>
-              <li><a href="#">Settings</a></li>
-              <li><a href="#">Security</a></li>
-              <li><a href="#">Logout</a></li>
-            </ul>
-          </details>
-        </li>
-        <!-- <li><a href="#" role="button">Button</a></li> -->
-      </ul>
-    </nav>
-  
-    <!-- <header style="padding-top: 30px;">
-      <h2>Pico CSS 입니다~</h2>
-    </header> -->
+  <section class="container-fluid" x-data="{ open: false }">
+    <header>
+      <h1 style="padding-top: 20px;">보금자리</h1>
+      <nav>
+        <ul>
+          <li>
+            <details class="dropdown">
+              <summary @click="open=!open">
+                <i x-bind:class="open?'fa-solid fa-x':'fa-solid fa-bars'"></i>
+              </summary>
+              <ul>
+                <li><a href="#bingsu">AboutUs</a></li>
+                <li><a href="#product">Products</a></li>
+                <li><a href="#service">Services</a></li>
+                <li>
+                  <details style="margin-top:0; margin-bottom:0;">
+                    <summary role="button" class="secondary outline"  style="width: 200px; border: none;">Information</summary>
+                    <p>...</p>
+                  </details>
+                </li>
+              </ul>
+            </details>
+          </li>
+          <li><a href="#bingsu">AboutUs</a></li>
+          <li><a href="#product">Products</a></li>
+          <li><a href="#service">Services</a></li>
+          <li><a href="#">Information</a></li>
+        </ul>
+        <ul>
+          <li>
+            <details class="dropdown">
+              <summary style="width: 200px">
+                Settings
+              </summary>
+              <ul>
+                <li><a href="#">Admin LogIn</a></li>
+                <li><a href="#">Admin LogOut</a></li>
+                <li><a href="#">Theme</a></li>
+                <li><a href="#">Software Information</a></li>
+              </ul>
+            </details>
+          </li>
+        </ul>
+      </nav>
+    </header>
 
     <div>
-      <article>
+      <article id="bingsu">
         <img src="./static/bingsu_20230922.jpg" >
       </article>
     </div>
   
     <div class="grid">
-      <article >
+      <article id="product">
         <header> 머리 </header>
-        <p>It's a card!</p>
+        <p>Product 1</p>
         <footer> 발 </footer>
       </article>
-      <article >
+      <article id="service">
         <header> 머리 </header>
-        <p>It's a card too!</p>
+        <p>Service 1</p>
         <footer> 발 </footer>
       </article>
     </div>
 
-    <div class="grid">
+    <div class="grid" id="buttons">
       <button> 단추1 </button>
       <button class="secondary"> 단추2 </button>
       <button class="contrast"> 단추3 </button>
       <button class="outline"> 단추4 </button>
     </div>
-  </div>
+  </section>
 
   <footer style="text-align: center; background-color: grey; padding: 20px; margin-top: 20px;">
     <p style="color: white">보금자리
       <br>서울 관악구 관악로
     </p>
   </footer>
-  
-  <!-- <dialog id="modal1">
-    <article>
-      <h3>Confirm your action!</h3>
-      <p>
-        냉무
-      </p>
-      <footer>
-        <a href="#cancel" role="button" class="secondary">Cancel</a>
-        <a href="#confirm" role="button">Confirm</a>
-      </footer>
-    </article>
-  </dialog> -->
 
 </body>
 </html>
