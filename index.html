@@ -18,18 +18,13 @@
           <li>
             <details class="dropdown">
               <summary @click="open=!open">
-                <i x-bind:class="open?'fa-solid fa-x':'fa-solid fa-bars'"></i>
+                <i x-bind:class="open?'fa-solid fa-x':'fa-solid fa-bars'" style="width: 1em"></i>
               </summary>
-              <ul>
+              <ul style="width: 150px;">
                 <li><a href="#bingsu">AboutUs</a></li>
                 <li><a href="#product">Products</a></li>
                 <li><a href="#service">Services</a></li>
-                <li>
-                  <details style="margin-top:0; margin-bottom:0;">
-                    <summary role="button" class="secondary outline"  style="width: 200px; border: none;">Information</summary>
-                    <p>...</p>
-                  </details>
-                </li>
+                <li><a href="#">Information</a></li>
               </ul>
             </details>
           </li>
